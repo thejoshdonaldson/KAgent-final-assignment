@@ -6,36 +6,41 @@ metadata:
 spec:
   type: Declarative
   description: A simple Kubernetes troubleshooting agent using Ollama
+
   declarative:
     modelConfig: ollama-model-config
-    systemMessage: |
-      You are a Kubernetes troubleshooting assistant. Blahblahblah stuff here
-  tools:
-    - type: McpServer
-      mcpServer:
-        name: kagent-tool-server
-        kind: RemoteMCPServer
-        apiGroup: kagent.dev
-        toolNames:
-          - k8s_get_resources
-    - type: McpServer
-      mcpServer:
-        name: kagent-tool-server
-        kind: RemoteMCPServer
-        apiGroup: kagent.dev
-        toolNames:
-          - k8s_describe_resource
-    - type: McpServer
-      mcpServer:
-        name: kagent-tool-server
-        kind: RemoteMCPServer
-        apiGroup: kagent.dev
-        toolNames:
-          - k8s_get_pod_logs
-    - type: McpServer
-      mcpServer:
-        name: kagent-tool-server
-        kind: RemoteMCPServer
-        apiGroup: kagent.dev
-        toolNames:
-          - k8s_get_events
+    systemMessage: |-
+      You are K8sHelper, a helpful Kubernetes troubleshooting assistant. Your role is to help users understand and troubleshoot Kubernetes cluster issues.
+
+    tools:
+      - type: McpServer
+        mcpServer:
+          apiGroup: kagent.dev
+          kind: RemoteMCPServer
+          name: kagent-tool-server
+          toolNames:
+            - k8s_get_resources
+
+      - type: McpServer
+        mcpServer:
+          apiGroup: kagent.dev
+          kind: RemoteMCPServer
+          name: kagent-tool-server
+          toolNames:
+            - k8s_describe_resource
+
+      - type: McpServer
+        mcpServer:
+          apiGroup: kagent.dev
+          kind: RemoteMCPServer
+          name: kagent-tool-server
+          toolNames:
+            - k8s_get_pod_logs
+
+      - type: McpServer
+        mcpServer:
+          apiGroup: kagent.dev
+          kind: RemoteMCPServer
+          name: kagent-tool-server
+          toolNames:
+            - k8s_get_events
