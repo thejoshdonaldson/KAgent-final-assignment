@@ -1,0 +1,14 @@
+apiVersion: kagent.dev/v1alpha2
+kind: Agent
+metadata:
+  name: k8s-troubleshooter
+  namespace: kagent
+spec:
+  type: Declarative
+  description: A simple Kubernetes troubleshooting agent using Ollama
+  declarative:
+    modelConfig: ollama-model-config
+    systemMessage: |
+      # Add your system message here
+      # For example:
+      You are a Kubernetes troubleshooting assistant.
