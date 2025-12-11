@@ -6,4 +6,5 @@ metadata:
 spec:
   provider: OpenAI
   model: llama3.2:1b
-  baseURL: http://ollama.ollama.svc.cluster.local:11434/v1
+  openAIConfig:
+    baseURL: http://ollama.ollama.svc.cluster.local:11434/v1
