@@ -1,1 +1,14 @@
-
+apiVersion: kagent.dev/v1alpha1
+kind: MCPServer
+metadata:
+  name: sample-mcp-server
+  namespace: mcp
+  labels:
+    kagent.dev/discovery: disabled
+spec:
+  deployment:
+    image: mcp/time:latest
+    port: 3000
+    cmd: mcp-server-time
+  transportType: stdio
+  stdioTransport:
