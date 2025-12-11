@@ -9,4 +9,4 @@ spec:
   sseReadTimeout: 5m0s
   terminateOnClose: true
   timeout: 30s
-  url: http://agentgateway.mcp.svc.cluster.local:3000
+  url: http://kgateway.kgateway-system.svc.cluster.local:9977
