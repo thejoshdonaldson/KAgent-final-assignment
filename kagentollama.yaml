@@ -1,0 +1,9 @@
+apiVersion: kagent.dev/v1alpha1
+kind: ModelConfig
+metadata:
+  name: ollama-model-config
+  namespace: kagent
+spec:
+  provider: OpenAI
+  model: llama3.2:1b
+  baseURL: http://ollama.ollama.svc.cluster.local:11434/v1
