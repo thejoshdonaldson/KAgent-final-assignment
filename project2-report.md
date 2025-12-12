@@ -12,3 +12,5 @@ There were a lot of challenges encountered in project 2. Many were syntax based.
 
 ### Learning
 I learned that managing agents in a cluster can be extremely granular. Controllers are separate from pods, and they handle the logic to how the pods execute workflows. I learned that namespaces within Kubernetes are 'security zones' and proprietary tasks are carried out within each namespace. I learned that agent gateways are not just fancy software routers, but logic stations that can handle agent traffic and bound it to identities, which is pretty cool. I can see why DevOps guys are going crazy over this new implementation of technology
+
+GitHub Repo (filedump): https://github.com/thejoshdonaldson/KAgent-final-assignment/tree/main
